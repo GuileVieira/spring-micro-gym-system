@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -14,12 +16,16 @@ public class PhysicalAssessment {
    @GeneratedValue(strategy = GenerationType.SEQUENCE)
    @Column(name = "physical_assessment_id")
     private Long id;
-    private String assessmentDate;
+    private LocalDate assessmentDate = LocalDate.now();
     private String assessmentType;
     private String assessmentResult;
     private String assessmentComments;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name = "user_id")
     private Member member;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "personal_trainer_id")
+    private PersonalTrainer author;
 }

@@ -14,7 +14,7 @@ CREATE TABLE plan (
 -- Inserindo planos com diferentes ciclos de cobrança
 INSERT INTO plan (plan_name, price, description, billing_cycle)
 VALUES
-    ('Plano 1', 50.00, 'Cobrança mensal - pago manualmente', 'MENSAL'),
-    ('Plano 2', 270.00, 'Cobrança semestral', 'SEMESTRAL'),
-    ('Plano 3', 500.00, 'Cobrança anual', 'ANUAL'),
-    ('Plano 4', 600.00, 'Fidelidade anual com cobrança recorrente mensal', 'RECORRENTE_MENSAL');
+    ('Plano 1', 120.00, 'Cobrança mensal - pago manualmente', 'MENSAL'),
+    ('Plano 2', 550.00, 'Cobrança semestral', 'SEMESTRAL'),
+    ('Plano 3', 1000.00, 'Cobrança anual', 'ANUAL'),
+    ('Plano 4', 100.00, 'Fidelidade anual com cobrança recorrente mensal', 'RECORRENTE_MENSAL');

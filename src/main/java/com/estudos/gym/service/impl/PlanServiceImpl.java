@@ -4,7 +4,9 @@ import com.estudos.gym.entity.Plan;
 import com.estudos.gym.respository.PlanRepository;
 import com.estudos.gym.service.PlanService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PlanServiceImpl implements PlanService {
 
     @Autowired
@@ -27,7 +29,6 @@ public class PlanServiceImpl implements PlanService {
 
     @Override
     public Plan updatePlan(Long id, Plan plan) {
-
         plan.setId(id);
         return planRepository.save(plan);
     }

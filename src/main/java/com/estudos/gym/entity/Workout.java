@@ -34,6 +34,6 @@ public class Workout {
             inverseJoinColumns = @JoinColumn(name = "exercise_id"))
     private Set<Exercise> exercises = new HashSet<>();
 
-    private final LocalDate date = LocalDate.now().plusDays(90);
+    private final LocalDate finalDate = LocalDate.now().plusDays(90);
 
 }

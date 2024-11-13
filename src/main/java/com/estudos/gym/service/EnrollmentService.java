@@ -1,7 +1,9 @@
 package com.estudos.gym.service;
 
 import com.estudos.gym.entity.Enrollment;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface EnrollmentService {
     Iterable<Enrollment> getAllEnrollments();
     Enrollment getEnrollmentById(Long id);
